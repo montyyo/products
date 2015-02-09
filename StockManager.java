@@ -37,6 +37,8 @@ public class StockManager
      */
     public void delivery(int id, int amount)
     {
+        Product encontrado = findProduct(id);
+        encontrado.increaseQuantity(amount);
     }
     
     /**
