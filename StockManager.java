@@ -99,4 +99,20 @@ public class StockManager
             System.out.println(stock.toString());
         }
     }
+    
+    
+    public void cantidadesInferiores(int cantidad)
+    {
+        
+        for( Product stocks : stock)
+        {
+            if(stocks.getQuantity() == cantidad)
+            {
+                System.out.println(stock.toString());
+            }
+        }
+        
+        
+        
+    }
 }
