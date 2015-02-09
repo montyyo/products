@@ -26,7 +26,11 @@ public class StockManager
      */
     public void addProduct(Product item)
     {
-        stock.add(item);
+        if(findProduct(item.getID()) ==  null)
+        {
+            stock.add(item);
+        }
+        
     }
     
     /**
@@ -106,13 +110,13 @@ public class StockManager
         
         for( Product stocks : stock)
         {
-            if(stocks.getQuantity() == cantidad)
+            if(stocks.getQuantity() < cantidad)
             {
                 System.out.println(stock.toString());
             }
         }
         
-        
-        
     }
+    
+   
 }
