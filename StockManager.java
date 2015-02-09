@@ -75,7 +75,15 @@ public class StockManager
      */
     public int numberInStock(int id)
     {
-        return 0;
+        int numberItems = 0;
+        for( Product stocks : stock)
+        {
+            if(stocks.getID() == id)
+            {
+                numberItems++;
+            }
+        }
+        return numberItems;
     }
 
     /**
