@@ -118,5 +118,24 @@ public class StockManager
         
     }
     
-   
+   public Product buscarPorNombre(String nombre)
+   {
+     
+            int index = 0;
+            boolean encontrado = false;
+            Product producto=null;
+            while(encontrado == false)
+            {
+                if(stock.get(index).getName() == nombre)
+                {
+                     producto= stock.get(index);
+                   
+                    encontrado = true;
+                    
+                }
+                
+                index++;
+            }
+            return producto;
+   }
 }
